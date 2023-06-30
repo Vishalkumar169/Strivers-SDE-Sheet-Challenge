@@ -1,0 +1,29 @@
+class Solution
+{
+	public:
+		string is_palindrome(int n)
+		{
+		    
+		  //  string num = to_string(n);
+		  //  string x = num;
+		  //  reverse(num.begin(),num.end());
+		  //  return (num==x)?"Yes":"No";
+		    
+		    
+		    int temp = n;
+		    int rev = 0;
+		    while(temp > 0)
+		    {
+		        rev = rev * 10 + temp % 10;
+		        temp = temp / 10;
+		    }
+		    if(n == rev)
+		    {
+		        return "Yes";
+		    }
+		    else
+		    {
+		        return "No";
+		    }
+		}
+};
